@@ -1,0 +1,39 @@
+# The semantic layer: what the agent reads about the data in "semantic" mode.
+# Each view uses ontology.yaml's words. In "raw" mode the agent sees only the raw
+# table and column names, as Live_FM_Alarms and IncidentTickets_prod store them.
+
+alarms_v:
+  description: One row per alarm, with severity and subscriber impact in plain words.
+  columns:
+    alarm_id: The alarm, such as ALM-2026-8001
+    site_code: The site the alarm was raised at
+    severity: Critical, Major or Minor (there is no fourth level)
+    service_affecting: yes or no
+    rca_classification: Root Cause, Symptom, Cascading, Transient or Standalone
+    event_time: When the alarm was raised, UTC
+    incident_id: The incident this alarm opened or belongs to, if any
+    subscribers_impacted_total: >-
+      All subscribers affected by this alarm, across every technology. This is
+      the feed's own pre-computed total (the "mobile" column) — do not re-sum
+      the separate 2G/3G/4G/5G columns, which overlap with it and with each
+      other rather than adding cleanly on top of it.
+
+incidents_v:
+  description: One row per incident (ticket), with its priority and root cause.
+  columns:
+    incident_id: The incident, such as INC-APX-2026-0811
+    site_code: The site the incident was opened for
+    priority: P1, P2, P3 or P4, the incident's handling priority
+    root_cause: The confirmed or suspected root cause, in plain text
+    created_at: When the incident was opened, UTC
+    closed_at: When it was closed, UTC, or empty if still open
+    is_open: yes or no
+
+sites_v:
+  description: One row per site, with its SLA profile.
+  columns:
+    site_code: The site code, such as KLCC01
+    site_name: The site's full name
+    profile: The SLA tier, e.g. Golden Hub, Silver or Standard
+    region: The region the site sits in
+    city: The city the site is in
