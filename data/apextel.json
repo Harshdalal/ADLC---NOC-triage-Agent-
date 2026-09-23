@@ -1,0 +1,315 @@
+{
+  "alarms": [
+    {
+      "alarm_id": "ALM-2026-8001",
+      "site_code": "KLCC01",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Root Cause",
+      "event_time": "2026-08-10 14:10:00 UTC",
+      "incident_id": "INC-APX-2026-0811",
+      "sub_2g": 1250,
+      "sub_3g": 1200,
+      "sub_4g": 11800,
+      "sub_5g": 3500,
+      "sub_mobile": 14250,
+      "alarm_name": "BBU DC Power Off"
+    },
+    {
+      "alarm_id": "ALM-2026-8002",
+      "site_code": "KLCC01",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Symptom",
+      "event_time": "2026-08-10 14:10:30 UTC",
+      "incident_id": "INC-APX-2026-0811",
+      "sub_2g": 0,
+      "sub_3g": 0,
+      "sub_4g": 4200,
+      "sub_5g": 0,
+      "sub_mobile": 4200,
+      "alarm_name": "Cell Down"
+    },
+    {
+      "alarm_id": "ALM-2026-8003",
+      "site_code": "BKBT02",
+      "severity_num": 2,
+      "sa_flag": "Yes",
+      "rca_result": "Cascading",
+      "event_time": "2026-08-10 14:12:00 UTC",
+      "incident_id": "INC-APX-2026-0812",
+      "sub_2g": 850,
+      "sub_3g": 650,
+      "sub_4g": 7600,
+      "sub_5g": 1800,
+      "sub_mobile": 9100,
+      "alarm_name": "BBU Optical Module Fault"
+    },
+    {
+      "alarm_id": "ALM-2026-7880",
+      "site_code": "BGSR03",
+      "severity_num": 3,
+      "sa_flag": "No",
+      "rca_result": "Standalone",
+      "event_time": "2026-08-04 17:55:00 UTC",
+      "incident_id": "INC-APX-2026-0740",
+      "sub_2g": 0,
+      "sub_3g": 0,
+      "sub_4g": 950,
+      "sub_5g": 0,
+      "sub_mobile": 950,
+      "alarm_name": "Cell Degraded"
+    },
+    {
+      "alarm_id": "ALM-2026-7810",
+      "site_code": "KLSN15",
+      "severity_num": 2,
+      "sa_flag": "No",
+      "rca_result": "Root Cause",
+      "event_time": "2026-08-02 10:30:00 UTC",
+      "incident_id": "INC-APX-2026-0720",
+      "sub_2g": 0,
+      "sub_3g": 0,
+      "sub_4g": 3200,
+      "sub_5g": 0,
+      "sub_mobile": 3200,
+      "alarm_name": "High Temperature Alarm"
+    },
+    {
+      "alarm_id": "ALM-2026-7010",
+      "site_code": "KLCC01",
+      "severity_num": 2,
+      "sa_flag": "No",
+      "rca_result": "Root Cause",
+      "event_time": "2026-06-20 20:45:00 UTC",
+      "incident_id": "INC-APX-2026-0180",
+      "sub_2g": 0,
+      "sub_3g": 0,
+      "sub_4g": 5800,
+      "sub_5g": 0,
+      "sub_mobile": 5800,
+      "alarm_name": "Cell Degraded"
+    },
+    {
+      "alarm_id": "ALM-2026-6950",
+      "site_code": "BGSR03",
+      "severity_num": 2,
+      "sa_flag": "No",
+      "rca_result": "Root Cause",
+      "event_time": "2026-06-17 04:10:00 UTC",
+      "incident_id": "INC-APX-2026-0148",
+      "sub_2g": 180,
+      "sub_3g": 200,
+      "sub_4g": 2100,
+      "sub_5g": 0,
+      "sub_mobile": 2480,
+      "alarm_name": "Power Module Fault"
+    },
+    {
+      "alarm_id": "ALM-2026-6830",
+      "site_code": "BKBT02",
+      "severity_num": 2,
+      "sa_flag": "No",
+      "rca_result": "Standalone",
+      "event_time": "2026-06-10 17:15:00 UTC",
+      "incident_id": "INC-APX-2026-0090",
+      "sub_2g": 0,
+      "sub_3g": 0,
+      "sub_4g": 0,
+      "sub_5g": 2100,
+      "sub_mobile": 2100,
+      "alarm_name": "Cell Degraded"
+    },
+    {
+      "alarm_id": "ALM-2026-6710",
+      "site_code": "KLSN15",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Root Cause",
+      "event_time": "2026-06-01 00:30:00 UTC",
+      "incident_id": "INC-APX-2026-0021",
+      "sub_2g": 1100,
+      "sub_3g": 800,
+      "sub_4g": 7800,
+      "sub_5g": 4500,
+      "sub_mobile": 9200,
+      "alarm_name": "GPS Synchronization Failure"
+    },
+    {
+      "alarm_id": "ALM-2026-6454",
+      "site_code": "KLCC01",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Root Cause",
+      "event_time": "2026-09-01 03:10:00 UTC",
+      "incident_id": "INC-APX-2026-0327",
+      "sub_2g": 1250,
+      "sub_3g": 2500,
+      "sub_4g": 14200,
+      "sub_5g": 3800,
+      "sub_mobile": 19800,
+      "alarm_name": "GPS Loss Alarm"
+    },
+    {
+      "alarm_id": "ALM-2026-6455",
+      "site_code": "BKBT02",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Root Cause",
+      "event_time": "2026-08-30 15:30:00 UTC",
+      "incident_id": "INC-APX-2026-0328",
+      "sub_2g": 1150,
+      "sub_3g": 2300,
+      "sub_4g": 12800,
+      "sub_5g": 3500,
+      "sub_mobile": 17500,
+      "alarm_name": "Link Down"
+    },
+    {
+      "alarm_id": "ALM-2026-6456",
+      "site_code": "BGSR03",
+      "severity_num": 1,
+      "sa_flag": "Yes",
+      "rca_result": "Root Cause",
+      "event_time": "2026-08-28 18:00:00 UTC",
+      "incident_id": "INC-APX-2026-0329",
+      "sub_2g": 980,
+      "sub_3g": 1950,
+      "sub_4g": 10400,
+      "sub_5g": 2900,
+      "sub_mobile": 14200,
+      "alarm_name": "Mains Fail"
+    }
+  ],
+  "incidents": [
+    {
+      "incident_id": "INC-APX-2026-0811",
+      "site_code": "KLCC01",
+      "priority": "P1",
+      "root_cause": "Battery Bank Aging and Rectifier Module 2 failure caused DC bus collapse",
+      "created_at": "2026-08-10 14:15:00 UTC",
+      "closed_at": null,
+      "short_description": "Total site power outage at KLCC Central Hub"
+    },
+    {
+      "incident_id": "INC-APX-2026-0812",
+      "site_code": "BKBT02",
+      "priority": "P2",
+      "root_cause": "Cascading failure triggered by primary hub KLCC01 DC blackout",
+      "created_at": "2026-08-10 14:20:00 UTC",
+      "closed_at": null,
+      "short_description": "Transmission backhaul unreachable due to KLCC aggregation hub outage"
+    },
+    {
+      "incident_id": "INC-APX-2026-0740",
+      "site_code": "BGSR03",
+      "priority": "P3",
+      "root_cause": "Lack of carrier aggregation balancing between L18 and L21 carriers",
+      "created_at": "2026-08-04 18:00:00 UTC",
+      "closed_at": "2026-08-04 21:10:00 UTC",
+      "short_description": "High PRB and radio congestion during evening rush hour"
+    },
+    {
+      "incident_id": "INC-APX-2026-0720",
+      "site_code": "KLSN15",
+      "priority": "P2",
+      "root_cause": "Aging cooling unit fan controller board reached end of operational life",
+      "created_at": "2026-08-02 10:35:00 UTC",
+      "closed_at": "2026-08-02 13:05:00 UTC",
+      "short_description": "Cabinet cooling failure; internal temperature exceeded safe operating limit"
+    },
+    {
+      "incident_id": "INC-APX-2026-0180",
+      "site_code": "KLCC01",
+      "priority": "P2",
+      "root_cause": "Traffic steering thresholds set too high to trigger offload to L21 carrier",
+      "created_at": "2026-06-20 20:50:00 UTC",
+      "closed_at": "2026-06-21 01:20:00 UTC",
+      "short_description": "Severe PRB congestion during evening corporate gala at convention center"
+    },
+    {
+      "incident_id": "INC-APX-2026-0148",
+      "site_code": "BGSR03",
+      "priority": "P2",
+      "root_cause": "Inadequate safety switch cover on legacy DC distribution sub-rack",
+      "created_at": "2026-06-17 04:15:00 UTC",
+      "closed_at": "2026-06-17 08:05:00 UTC",
+      "short_description": "Sub-rack breaker trip during scheduled low-traffic maintenance window"
+    },
+    {
+      "incident_id": "INC-APX-2026-0090",
+      "site_code": "BKBT02",
+      "priority": "P2",
+      "root_cause": "Phase drift exceeded auto-calibration threshold tolerance window",
+      "created_at": "2026-06-10 17:20:00 UTC",
+      "closed_at": "2026-06-10 20:15:00 UTC",
+      "short_description": "5G NR sector 1 beamforming weight distortion causing user throughput degradation"
+    },
+    {
+      "incident_id": "INC-APX-2026-0021",
+      "site_code": "KLSN15",
+      "priority": "P1",
+      "root_cause": "Component hardware breakdown in timing receiver sub-module",
+      "created_at": "2026-06-01 00:35:00 UTC",
+      "closed_at": "2026-06-01 04:05:00 UTC",
+      "short_description": "5G NR timing reference loss causing frame alignment error and sector muting"
+    },
+    {
+      "incident_id": "INC-APX-2026-0327",
+      "site_code": "KLCC01",
+      "priority": "P1",
+      "root_cause": "Swapped rooftop GPS antenna and installed new PolyPhaser inline surge arrestor",
+      "created_at": "2026-09-01 03:15:00 UTC",
+      "closed_at": "2026-09-01 06:45:00 UTC",
+      "short_description": "KLCC Tower 1 rooftop GNSS receiver surge protection degraded by thunderstorm"
+    },
+    {
+      "incident_id": "INC-APX-2026-0328",
+      "site_code": "BKBT02",
+      "priority": "P1",
+      "root_cause": "OTDR identified fiber break at 1.8km from Bukit Bintang exchange",
+      "created_at": "2026-08-30 15:35:00 UTC",
+      "closed_at": "2026-08-30 19:15:00 UTC",
+      "short_description": "Bukit Bintang MRT underground utility conduit snagged during road resurfacing"
+    },
+    {
+      "incident_id": "INC-APX-2026-0329",
+      "site_code": "BGSR03",
+      "priority": "P1",
+      "root_cause": "TNB utility switching team rerouted power from Bangsar South substation loop",
+      "created_at": "2026-08-28 18:05:00 UTC",
+      "closed_at": "2026-08-28 21:55:00 UTC",
+      "short_description": "Bangsar Telawi dining precinct underground 11kV cable burnout"
+    }
+  ],
+  "sites": [
+    {
+      "site_code": "KLCC01",
+      "site_name": "Kuala Lumpur City Centre Central Hub",
+      "profile": "Golden Hub",
+      "region": "Central",
+      "city": "Kuala Lumpur"
+    },
+    {
+      "site_code": "BKBT02",
+      "site_name": "Bukit Bintang Commercial Tower",
+      "profile": "Silver",
+      "region": "Central",
+      "city": "Kuala Lumpur"
+    },
+    {
+      "site_code": "BGSR03",
+      "site_name": "Bangsar Commercial Hub",
+      "profile": "Golden",
+      "region": "Central",
+      "city": "Kuala Lumpur"
+    },
+    {
+      "site_code": "KLSN15",
+      "site_name": "KL Sentral Transit Hub",
+      "profile": "Golden Hub",
+      "region": "Central",
+      "city": "Kuala Lumpur"
+    }
+  ]
+}
