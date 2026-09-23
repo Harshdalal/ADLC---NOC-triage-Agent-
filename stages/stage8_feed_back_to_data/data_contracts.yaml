@@ -1,0 +1,50 @@
+# Data contracts — Stage 8: Feed back to data.
+#
+# ADR-8: every tool is read-only by default. A write path is a separate,
+# explicitly reviewed contract — none exists yet in this kit.
+#
+# These are the same three tools as Stage 4's tool_catalog.md and Stage 6's
+# mcp_server/apextel_mcp.py, written here as a machine-checkable contract:
+# exactly what a caller may send in, and exactly what shape comes back.
+# contract_tests.py checks the real code against this file.
+
+describe_data:
+  access: read-only
+  input: {}
+  output:
+    raw_mode: {mode: string, tables: {type: object, description: "table name -> list of column names"}}
+    semantic_mode: {mode: string, views: {type: object, description: "view name -> {description, columns}"}}
+
+run_sql:
+  access: read-only
+  input:
+    query: {type: string, required: true, description: "one SQL SELECT or WITH statement"}
+  output:
+    ok: {status: string, columns: list, rows: list, truncated: boolean}
+    blocked: {status: string, reason: string}
+    error: {status: string, error: string}
+  limits:
+    max_rows: 50
+    statements_per_call: 1
+    write_keywords_forbidden: [insert, update, delete, drop, alter, create, replace, attach, pragma, grant, merge, truncate]
+
+search_runbook:
+  access: read-only
+  input:
+    question: {type: string, required: true}
+  output:
+    status: string
+    backend: string
+    passages:
+      type: list
+      max_items: 3
+      item: {source: string, runbook: string, section: string, text: string, score: number}
+
+# Reserved for a future ADR — not implemented, not exposed by the MCP server.
+open_incident_writeback:
+  access: NOT IMPLEMENTED
+  note: >
+    A write path (e.g. attaching the agent's classification back onto the
+    incident record) would need its own contract, its own review, and its
+    own entry in Stage 9's audit trail before it could be added here. Until
+    that ADR exists, the agent has no way to write anything, by design.
