@@ -1,0 +1,76 @@
+# The Stage 6 golden set: ten questions with known answers, grounded in ApexTel's
+# real KLCC01 / BKBT02 incident on 10 Aug 2026.
+#
+# Each answer comes from the data, the runbooks, or both, never from general
+# knowledge. The same ten questions run on all three agents, so the difference
+# between them is the effect of grounding, and then of the shape of the data.
+#
+#   needs          sql, runbook or both: where the answer lives
+#   expect         every one of these must appear in the answer (ignoring case)
+#   any_of         at least one of these must appear (for answers with several fair wordings)
+#   why            where the answer comes from, so a failure can be diagnosed
+
+eval_set: stage6_grounding_v1
+questions:
+  - id: G1
+    needs: sql
+    question: How many subscribers were impacted by the KLCC01 power outage, alarm ALM-2026-8001?
+    expect: ["14,250"]
+    any_of: ["14250", "14,250"]
+    why: "alarms_v.subscribers_impacted_total. In the raw table, smob is already the total; summing all five columns overcounts"
+
+  - id: G2
+    needs: sql
+    question: How many alarms are recorded at BKBT02?
+    any_of: ["1", "one"]
+    why: "alm_tbl / alarms_v filtered by site_code = BKBT02"
+
+  - id: G3
+    needs: sql
+    question: What priority is incident INC-APX-2026-0812?
+    expect: [P2]
+    why: "tkt_tbl.pri, or incidents_v.priority"
+
+  - id: G4
+    needs: sql
+    question: What profile is site KLCC01, and why does that matter for its SLA?
+    expect: ["Golden Hub"]
+    why: "site_tbl.prof, or sites_v.profile"
+
+  - id: G5
+    needs: sql
+    question: Is incident INC-APX-2026-0811 still open?
+    any_of: ["yes", "still open", "open"]
+    why: "tkt_tbl.xdt is empty, or incidents_v.is_open = yes"
+
+  - id: G6
+    needs: runbook
+    question: What is the response procedure for a BBU DC Power Off alarm?
+    any_of: ["genset", "rectifier", "mains"]
+    why: "bbu_power_failure.md, DC Power Failure Initial Response"
+
+  - id: G7
+    needs: runbook
+    question: At what remaining battery backup time should we dispatch the mobile genset?
+    any_of: ["4 hours", "four hours"]
+    why: "bbu_power_failure.md, Battery Backup Estimation Guide"
+
+  - id: G8
+    needs: runbook
+    question: What is the SLA for automatic transmission path failover?
+    any_of: ["50ms", "50 ms", "90s", "90 s", "90 seconds"]
+    why: "transmission_failover.md, Transmission Path Failover Activation"
+
+  - id: G9
+    needs: both
+    question: What is the root cause of the KLCC01 outage, and what does the runbook say to do next?
+    expect: [rectifier]
+    any_of: ["genset", "hot-swap", "replace"]
+    why: "tkt_tbl.rcause names the rectifier module; bbu_power_failure.md gives the next steps"
+
+  - id: G10
+    needs: both
+    question: How many subscribers were affected at KLCC01, and what is BKBT02's transmission failover SLA?
+    expect: ["14,250"]
+    any_of: ["50ms", "50 ms", "90s", "90 seconds"]
+    why: "alarms_v.subscribers_impacted_total for KLCC01; transmission_failover.md for the SLA"
